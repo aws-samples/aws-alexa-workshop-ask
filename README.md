@@ -1,11 +1,13 @@
-## My Project
+## Hands-on Workshop on Learning how to Create Amazon Alexa Skills and Amazon Lex bot
 
-TODO: Fill this README out!
+This is the source code of [AWS & Alexa Workshop - Lab: Alexa Custom Skills](https://alexaworkshop.com/custom-skill/).
+Click the link to access the lab material.
 
-Be sure to:
+If you are looking for the entire workshop, please visit [AWS & Alexa Workshop](https://alexaworkshop.com/).
 
-* Change the title in this README
-* Edit your repository description on GitHub
+If you have any issues, please create issues in [aws-samples/aws-alexa-workshop](https://github.com/aws-samples/aws-alexa-workshop/issues) repository.
+
+![](aws_alexa.png)
 
 ## License
 

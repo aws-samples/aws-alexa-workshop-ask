@@ -1,0 +1,80 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "personal banker",
+            "intents": [
+                {
+                    "name": "GetLoanProducts",
+                    "slots": [
+                        {
+                            "name": "LoanType",
+                            "type": "LoanType"
+                        }
+                    ],
+                    "samples": [
+                        "what is the rate on the {LoanType} loan",
+                        "more loan info"
+                    ]
+                },
+                {
+                    "name": "GetLoanDetail",
+                    "slots": [
+                        {
+                            "name": "LoanType",
+                            "type": "LoanType"
+                        }
+                    ],
+                    "samples": [
+                        "Get my {LoanType} loan balance"
+                    ]
+                },
+                {
+                    "name": "GetAccountDetail",
+                    "slots": [
+                        {
+                            "name": "AccountType",
+                            "type": "AccountType"
+                        }
+                    ],
+                    "samples": [
+                        "What is my {AccountType} balance",
+                        "{AccountType} account balance",
+                        "What is the {AccountType} balance"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LoanType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "car"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "home"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AccountType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "saving"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "checking"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

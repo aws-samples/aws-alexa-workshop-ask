@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "PersonalBanker",
+    "version": "1",
+    "intents": [
+      {
+        "name": "GetLoanProducts",
+        "version": "4",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "what is the rate on the {LoanType} loan",
+          "more loan info"
+        ],
+        "slots": [
+          {
+            "name": "LoanType",
+            "slotConstraint": "Required",
+            "slotType": "LoanType",
+            "slotTypeVersion": "1",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "what is the loan type"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "sampleUtterances": []
+          }
+        ]
+      },
+      {
+        "name": "GetLoanDetail",
+        "version": "3",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Get my {LoanType} loan balance"
+        ],
+        "slots": [
+          {
+            "name": "LoanType",
+            "slotConstraint": "Required",
+            "slotType": "LoanType",
+            "slotTypeVersion": "1",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What loan account?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "sampleUtterances": []
+          }
+        ]
+      },
+      {
+        "name": "GetAccountDetail",
+        "version": "5",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What is my {AccountType} balance",
+          "{AccountType} account balance",
+          "What is the {AccountType} balance"
+        ],
+        "slots": [
+          {
+            "name": "AccountType",
+            "slotConstraint": "Required",
+            "slotType": "AccountType",
+            "slotTypeVersion": "1",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What type of account?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "sampleUtterances": []
+          }
+        ]
+      }
+    ],
+    "slotTypes": [
+      {
+        "name": "LoanType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "car",
+            "synonyms": []
+          },
+          {
+            "value": "home",
+            "synonyms": []
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      },
+      {
+        "name": "AccountType",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "saving",
+            "synonyms": []
+          },
+          {
+            "value": "checking",
+            "synonyms": []
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      }
+    ],
+    "voiceId": "Salli",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 300,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, can you please repeat that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Goodbye."
+        }
+      ]
+    }
+  }
+}
