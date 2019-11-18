@@ -4,6 +4,10 @@
             "invocationName": "personal banker",
             "intents": [
                 {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
                     "name": "GetLoanProducts",
                     "slots": [
                         {
