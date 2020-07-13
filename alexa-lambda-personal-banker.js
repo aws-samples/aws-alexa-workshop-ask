@@ -101,7 +101,7 @@ function onIntent(intentRequest, session, callback) {
     const shouldEndSession = false;
     var LoanType = intent.slots.LoanType.value;
     if (LoanType == 'car'){
-      speechOutput = '<speak>You car loan balance is 35 thousands, and your current rate is 0.05%.  To know more about your home loan detail, say home. Or say Account Balance to know your account. Or say Loan product to know about loan product.';
+      speechOutput = '<speak>You car loan balance is 35 thousands, and your current rate is 0.05%.  To know more about your home loan detail, say home. Or say Account Balance to know your account. Or say Loan product to know about loan product. </speak>';
     } else if (LoanType == 'home'){
       speechOutput = '<speak>You home loan balance is 1.2 millon, and your current rate is 0.035%.  To know more about the car loan detail, say car. Or say Account Balance to know your account. Or say Loan product to know about loan product. </speak>';
     } else {
