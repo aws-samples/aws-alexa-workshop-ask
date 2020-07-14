@@ -8,6 +8,14 @@
                     "samples": []
                 },
                 {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
                     "name": "GetLoanProducts",
                     "slots": [
                         {
@@ -45,6 +53,10 @@
                         "{AccountType} account balance",
                         "What is the {AccountType} balance"
                     ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
                 }
             ],
             "types": [
